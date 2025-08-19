@@ -1,120 +1,241 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivana Yael Currá | Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Ivana Yael Currá | Project Manager</title>
+    <!-- Meta descripción para SEO: resume el contenido de la página para Google -->
+    <meta name="description" content="Perfil profesional de Ivana Yael Currá, Project Manager. Descubre su experiencia en gestión de proyectos de tecnología y optimización de procesos. Conéctate a través de sus perfiles de LinkedIn, GitHub e Instagram.">
+
+    <!-- Incluye las fuentes y los iconos de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Datos estructurados (Schema.org) para ayudar a los motores de búsqueda a entender el contenido -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ivana Yael Currá",
+      "jobTitle": "Project Manager",
+      "email": "mailto:ivanayaelcurra@gmail.com",
+      "image": "https://placehold.co/150x150/000000/FFFFFF?text=Tu+Foto",
+      "url": "https://ivanayael.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/ivanayael/",
+        "https://github.com/ivanayael",
+        "https://www.instagram.com/ivanayaelcurra/"
+      ]
+    }
+    </script>
     <style>
+        /* Definición de variables CSS para el tema claro */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --link-color: #000000;
+            --link-hover-color: #888888;
+        }
+        /* Definición de variables CSS para el modo oscuro */
+        body.dark-mode {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --link-color: #ffffff;
+            --link-hover-color: #bbbbbb;
+        }
+        
+        /* Estilos generales del cuerpo y tipografía */
         body {
-            background-color: #000;
-            color: #FFF;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.5s ease, color 0.5s ease;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        header {
-            background-color: #1c1c1e;
-            padding: 1rem;
-        }
-        .hero {
+        /* Estilos del contenedor principal */
+        .container {
             text-align: center;
-            padding: 3rem;
-            background: linear-gradient(to bottom, #0a0a0a, #1c1c1e);
-        }
-        .hero h1 {
-            color: #0eb2f4;
-        }
-        .projects {
             padding: 2rem;
+            max-width: 90%;
+            width: 500px;
         }
-        .project-card {
-            background-color: #1c1c1e;
-            border: 1px solid #333;
+        /* Estilos de la fotografía */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid var(--text-color);
+            object-fit: cover;
+            margin-bottom: 1rem; /* Espaciado más pequeño */
+            transition: border-color 0.5s ease;
+        }
+        /* Estilos para el nombre */
+        .name {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem; /* Tamaño más pequeño */
+            font-weight: 700;
+            margin-bottom: 0.2rem; /* Espaciado más pequeño */
+        }
+        /* Estilos del título "Project Manager" */
+        .title {
+            font-size: 1.2rem; /* Tamaño más pequeño */
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        /* Estilos para el texto de bienvenida */
+        .welcome-text {
+            font-size: 0.9rem; /* Tamaño más pequeño */
+            margin-bottom: 1.5rem; /* Espaciado más pequeño */
+            line-height: 1.5;
+        }
+        /* Estilos de los enlaces sociales */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem; /* Espaciado más pequeño */
+        }
+        .social-links a {
+            text-decoration: none;
+            color: var(--link-color);
+            font-size: 1rem; /* Tamaño más pequeño */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.6rem; /* Padding más pequeño */
+            border: 1px solid var(--link-color);
             border-radius: 8px;
-            color: #FFF;
-            padding: 1rem;
-            margin: 1rem;
-            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-        .project-card img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
+        .social-links a:hover {
+            color: var(--link-hover-color);
+            border-color: var(--link-hover-color);
         }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #111;
-            color: #666;
+        /* Estilos para el botón de cambio de tema (modo oscuro) */
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.5s ease;
         }
-        .btn-primary {
-            background-color: #0eb2f4;
-            border: none;
+        .theme-toggle:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
         }
-        .about {
-            padding: 2rem;
-            background-color: #0a0a0a;
+        /* Estilos para los iconos de Google */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            transition: all 0.5s ease;
         }
-        .about h2 {
-            color: #0eb2f4;
+        .dark-mode .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Media queries para diseño responsivo */
+        @media (max-width: 480px) {
+            .name {
+                font-size: 1.8rem;
+            }
+            .title {
+                font-size: 1.1rem;
+            }
+            .social-links a {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="text-center">Ivana Yael Currá</h1>
-    </header>
-    <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my projects and skills in web design and development.</p>
-        <p>this website in on Development. Please, stand by.</p>
-    </section>
-    <section class="projects container">
-        <h2>Highlighted Projects</h2>
-        <div class="row">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <span class="material-symbols-outlined">
+            dark_mode
+        </span>
+    </button>
+    <div class="container">
+        <!-- 
+            La ruta a la imagen ha sido cambiada para que sea compatible con entornos web.
+            
+            IMPORTANTE:
+            La URL actual es un marcador de posición.
+            Una vez que subas tu foto a GitHub (por ejemplo, en una carpeta llamada 'assets'), 
+            debes actualizar esta línea con la URL real de tu foto. 
+            Por ejemplo: `src="https://ivanayael.github.io/assets/tu_foto.webp"`
+        -->
+        <img src="https://placehold.co/150x150/000000/FFFFFF?text=Tu+Foto"
+             alt="Fotografía de perfil de Ivana Yael Currá, Project Manager"
+             class="profile-photo">
 
-            <div class="col-md-4 project-card">
-                <img src="https://via.placeholder.com/300x200" alt="IYC Sapphire Project">
-                <h3>IYC Sapphire</h3>
-                <p>An innovative consultancy platform for achieving excellence.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
-            </div>
-            <div class="col-md-4 project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Gigastickers Project">
-                <h3>Meet and Net - Evento CFL 402 Lomas de Zamora</h3>
-                <p>A web for a formal educational event in Lomas de Zamora, Buenos Aires, Argentina.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
-            </div>
-            <div class="col-md-4 project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Gigastickers Project">
-                <h3>Sorteo Evento CFL 402</h3>
-                <p>A "Sorteo" - the final of the CFL 402 Event.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
-            </div>
-            <div class="col-md-4 project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Gigastickers Project">
-                <h3>Gigastickers</h3>
-                <p>A dynamic sticker management system built with modern tools.</p>
-                <p>On Develop.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
-            </div>
-            <div class="col-md-4 project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Kfee Project">
-                <h3>Kfee</h3>
-                <p>A creative project showcasing advanced design skills.</p>
-                <a href="#" class="btn btn-primary">View Project</a>
-            </div>
+        <h1 class="name">Ivana Yael Currá</h1>
+        <h2 class="title">Project Manager</h2>
+        <p class="welcome-text">
+            Soy un Project Manager con experiencia en la gestión de proyectos de tecnología y la optimización de procesos. Explora mis perfiles para ver mi trabajo y conectar.
+        </p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ivanayael/" target="_blank" aria-label="Perfil de LinkedIn">
+                <span class="material-symbols-outlined">
+                    group
+                </span>
+                LinkedIn
+            </a>
+            <a href="https://github.com/ivanayael" target="_blank" aria-label="Perfil de GitHub">
+                <span class="material-symbols-outlined">
+                    code
+                </span>
+                GitHub
+            </a>
+            <a href="mailto:ivanayaelcurra@gmail.com" aria-label="Enviar correo electrónico">
+                <span class="material-symbols-outlined">
+                    mail
+                </span>
+                ivanayaelcurra@gmail.com
+            </a>
+            <a href="https://www.instagram.com/ivanayaelcurra/" target="_blank" aria-label="Perfil de Instagram">
+                <span class="material-symbols-outlined">
+                    photo_camera
+                </span>
+                Instagram
+            </a>
         </div>
-    </section>
-    <section class="about container">
-        <h2>About Me</h2>
-        <p>I am a university lecturer in Argentina with over 5 years of experience, including 3 years as Lead and Assistant in Multimedia Design, and 3 years as an assistant in Art for Video Games.</p>
-        <p>Starting in 2025, I will begin a complementary cycle in Game Design and Development and aspire to teach this subject in the future.</p>
-        <p>If you need a website or a class, you can contact me <a href="https://www.iycsapphire.com.ar">here.</a></p>
-        <p>I'm also an actress in training. Yuo can check my information of me <a href="https://www.ivanayaelcurra.com.ar">here.</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Ivana Yael Currá. All Rights Reserved.</p>
-    </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            
+            // Comprueba si ya existe una preferencia de tema guardada en localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                body.classList.add(savedTheme);
+            }
+
+            themeToggle.addEventListener('click', () => {
+                // Alterna la clase 'dark-mode' en el body
+                body.classList.toggle('dark-mode');
+                
+                // Guarda la preferencia en localStorage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark-mode');
+                } else {
+                    localStorage.setItem('theme', '');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
