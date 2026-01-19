@@ -52,9 +52,9 @@ Si deseas replicar este portafolio o usarlo como base:
 
 ¿Te interesa trabajar conmigo o conocer más sobre mis proyectos?
 
-* **LinkedIn:** [Tu Nombre de Usuario](https://linkedin.com/in/tu-perfil)
-* **Email:** tu-correo@ejemplo.com
+* **LinkedIn:** [ivanayael](https://www.linkedin.com/in/ivanayael/)
+* **Email:** ivanayaelcurra@gmail.com
 * **GitHub:** [@ivanayael](https://github.com/ivanayael)
 
 ---
-*Hecho con dedicación por Ivana Yael.*
+*Hecho con dedicación por Ivana Yael Currá.*
