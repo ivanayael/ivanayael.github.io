@@ -13,7 +13,7 @@ Este portafolio ha sido construido enfocándome en el rendimiento y la semántic
 * **Frontend:** HTML5, CSS3 (Custom Properties / Flexbox / Grid).
 * **Interactividad:** JavaScript (Vanilla JS).
 * **Despliegue:** GitHub Pages.
-* **Herramientas:** [Menciona aquí si usaste algo como FontAwesome, Google Fonts o alguna librería de animaciones].
+* **Herramientas:** [].
 
 ---
 
@@ -41,7 +41,9 @@ Si deseas replicar este portafolio o usarlo como base:
 
 ## 📈 Roadmap / Próximas Actualizaciones
 
-- [ ] Implementar un Modo Oscuro (Dark Mode) dinámico.
+- [X] Implementar un Modo Oscuro (Dark Mode) dinámico.
+- [ ] Añadir Seccion Proyectos
+- [ ] Añadir Seccion Habilidades
 - [ ] Añadir una sección de Blog personal.
 - [ ] Optimizar aún más la carga de imágenes (WebP).
 - [ ] Integrar un formulario de contacto con validación en JS.
