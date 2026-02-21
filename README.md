@@ -42,11 +42,9 @@ Si deseas replicar este portafolio o usarlo como base:
 ## 📈 Roadmap / Próximas Actualizaciones
 
 - [X] Implementar un Modo Oscuro (Dark Mode) dinámico.
-- [ ] Añadir Seccion Proyectos
-- [ ] Añadir Seccion Habilidades
-- [ ] Añadir una sección de Blog personal.
-- [ ] Optimizar aún más la carga de imágenes (WebP).
-- [ ] Integrar un formulario de contacto con validación en JS.
+- [X] Unificar el perfil 
+- [X] Limpiar la lista de acciones no necesarias
+- [X] Republicar
 
 ---
 
